@@ -1,7 +1,5 @@
 import { ShoppingCart } from "lucide-react";
 import { useCart } from "@/hooks/use-cart";
-// import { useLocation } from "wouter";
-// import { Link, useLocation } from 'wouter';
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 

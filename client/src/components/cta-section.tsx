@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-// import { Link } from "wouter";
 import { useNavigate } from "react-router-dom";
 
 export default function CTASection() {
