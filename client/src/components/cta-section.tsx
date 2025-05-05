@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+// import { Link } from "wouter";
+import { useNavigate } from "react-router-dom";
 
 export default function CTASection() {
   const benefits = [
@@ -8,7 +9,7 @@ export default function CTASection() {
     { value: "Free", label: "Shipping" },
     { value: "24/7", label: "Support" },
   ];
-
+  const navigate = useNavigate();
   return (
     <section className="py-16 bg-slate-900">
       <div className="container mx-auto px-4">
@@ -28,14 +29,14 @@ export default function CTASection() {
                 thousands of satisfied homeowners across America.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/gates">
-                  <Button
-                    variant="outline"
-                    className="bg-white text-primary hover:bg-slate-100"
-                  >
-                    Design Your Gate
-                  </Button>
-                </Link>
+                <Button
+                  onClick={() => navigate("/gates")}
+                  variant="outline"
+                  className="bg-white text-primary hover:bg-slate-100"
+                >
+                  Design Your Gate
+                </Button>
+
                 <Button
                   variant="outline"
                   className="bg-white text-primary hover:bg-slate-100"

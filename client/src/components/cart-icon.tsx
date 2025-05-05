@@ -1,18 +1,20 @@
-import { ShoppingCart } from 'lucide-react';
-import { useCart } from '@/hooks/use-cart';
-import { Link, useLocation } from 'wouter';
-import { Button } from '@/components/ui/button';
+import { ShoppingCart } from "lucide-react";
+import { useCart } from "@/hooks/use-cart";
+// import { useLocation } from "wouter";
+// import { Link, useLocation } from 'wouter';
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 export default function CartIcon() {
   const { itemCount } = useCart();
-  const [_, navigate] = useLocation();
+  const navigate = useNavigate(); // Hook to navigate programmatically
 
   return (
-    <Button 
-      variant="ghost" 
-      size="icon" 
+    <Button
+      variant="ghost"
+      size="icon"
       className="relative text-slate-800 hover:text-primary transition-all"
-      onClick={() => navigate('/cart')}
+      onClick={() => navigate("/cart")}
     >
       <ShoppingCart className="h-6 w-6" />
       {itemCount > 0 && (

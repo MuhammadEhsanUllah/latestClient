@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Link } from "wouter";
+// import { Link } from "wouter";
+import { Link } from "react-router-dom";
 import CTASection from "@/components/cta-section";
 
 export default function FenceAndGates() {
@@ -127,7 +128,7 @@ export default function FenceAndGates() {
                     ))}
                   </ul>
 
-                  <Link href={option.link}>
+                  <Link to={option.link}>
                     <Button className="w-full bg-primary hover:bg-primary/90">
                       {option.cta}
                     </Button>
@@ -154,7 +155,7 @@ export default function FenceAndGates() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {gateFenceCategories.map((category) => (
-              <Link key={category.id} href={category.link}>
+              <Link key={category.id} to={category.link}>
                 <a className="block">
                   <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                     <img

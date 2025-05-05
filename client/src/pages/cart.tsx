@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Link } from "wouter";
+// import { Link } from "wouter";
+import { Link } from "react-router-dom";
 import { Trash2, Upload, Check } from "lucide-react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -80,12 +81,12 @@ export default function Cart() {
                 Add some products to your cart to continue shopping
               </p>
               <div className="flex justify-center gap-4">
-                <Link href="/gates">
+                <Link to="/gates">
                   <Button className="bg-primary hover:bg-primary/90">
                     Browse Gates
                   </Button>
                 </Link>
-                <Link href="/fences">
+                <Link to="/fences">
                   <Button className="bg-primary hover:bg-primary/90">
                     Browse Fences
                   </Button>
@@ -153,12 +154,12 @@ export default function Cart() {
                 <div className="space-y-8">
                   {/* Add More Items Buttons */}
                   <div className="flex gap-4">
-                    <Link href="/fences">
+                    <Link to="/fences">
                       <Button className="w-full bg-amber-500 hover:bg-amber-600">
                         Add Fences
                       </Button>
                     </Link>
-                    <Link href="/extras">
+                    <Link to="/extras">
                       <Button className="w-full bg-amber-500 hover:bg-amber-600">
                         Add Extras
                       </Button>

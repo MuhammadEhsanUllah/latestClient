@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
-import { cn } from "@/lib/utils";
-
+// import { Link } from "wouter";
+// import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 export default function HeroSection() {
   return (
     <section className="bg-primary relative overflow-hidden">
@@ -18,7 +18,7 @@ export default function HeroSection() {
               extra cost.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/gates">
+              <Link to="/gates">
                 <Button
                   variant="outline"
                   className="bg-white text-primary hover:bg-slate-100"
@@ -26,7 +26,7 @@ export default function HeroSection() {
                   Design Your Gate
                 </Button>
               </Link>
-              <Link href="/gallery">
+              <Link to="/gallery">
                 <Button
                   variant="outline"
                   className="bg-white text-primary hover:bg-slate-100"
