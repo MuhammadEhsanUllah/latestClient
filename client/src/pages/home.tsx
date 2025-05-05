@@ -6,16 +6,19 @@ import DesignSection from "@/components/design-section";
 import TestimonialSection from "@/components/testimonial-section";
 import CTASection from "@/components/cta-section";
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
-    <main>
-      <HeroSection />
-      <CompanyIntro />
-      <MapSection />
-      <ProductGallery />
-      <DesignSection />
-      <TestimonialSection />
-      <CTASection />
-    </main>
+    <h1>Hello world</h1>
+    // <main>
+    //   <HeroSection />
+    //   <CompanyIntro />
+    //   <MapSection />
+    //   <ProductGallery />
+    //   <DesignSection />
+    //   <TestimonialSection />
+    //   <CTASection />
+    // </main>
   );
-}
+};
+
+export default Home;

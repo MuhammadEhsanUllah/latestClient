@@ -57,37 +57,58 @@ function App() {
   // const [apiKeyDialogOpen, setApiKeyDialogOpen] = useState(false);
 
   return (
+    <Router>
+      <div>
+        {/* <h1>My React App with Vite and Routing</h1> */}
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </Router>
     // <QueryClientProvider client={queryClient}>
     // <ApiKeyProvider>
-    <CartProvider>
-      <div className="flex flex-col min-h-screen">
-        <Router>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/gates" element={<Gates />} />
-            <Route path="/fences" element={<Fences />} />
-            <Route path="/features" element={<Features />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/parts" element={<Parts />} />
-            <Route path="/extras" element={<Extras />} />
-            <Route path="/fence-and-gates" element={<FenceAndGates />} />
-            <Route path="/custom-gate" element={<CustomGate />} />
-            <Route path="/custom-fence" element={<CustomFence />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <Footer />
-          <Toaster />
-        </Router>
-        {/* <ApiKeyDialog
-            open={apiKeyDialogOpen}
-            onOpenChange={setApiKeyDialogOpen}
-          /> */}
-      </div>
-    </CartProvider>
+    // <CartProvider>
+    //   <div className="flex flex-col min-h-screen">
+    //     <Router>
+    //       <Header />
+    //       <Routes>
+    //         <Route path="/" element={<Home />} />
+    //         <Route path="/gates" element={<Gates />} />
+    //         <Route path="/fences" element={<Fences />} />
+    //         <Route path="/features" element={<Features />} />
+    //         <Route path="/login" element={<Login />} />
+    //         <Route path="/signup" element={<Signup />} />
+    //         <Route path="/gallery" element={<Gallery />} />
+    //         <Route path="/parts" element={<Parts />} />
+    //         <Route path="/extras" element={<Extras />} />
+    //         <Route path="/fence-and-gates" element={<FenceAndGates />} />
+    //         <Route path="/custom-gate" element={<CustomGate />} />
+    //         <Route path="/custom-fence" element={<CustomFence />} />
+    //         <Route path="/cart" element={<Cart />} />
+    //         <Route path="*" element={<NotFound />} />
+    //       </Routes>
+    //       <Footer />
+    //       <Toaster />
+    //     </Router>
+    //     {/* <ApiKeyDialog
+    //         open={apiKeyDialogOpen}
+    //         onOpenChange={setApiKeyDialogOpen}
+    //       /> */}
+    //   </div>
+    // </CartProvider>
     // </ApiKeyProvider>
     // </QueryClientProvider>
   );
