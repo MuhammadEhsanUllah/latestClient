@@ -1,6 +1,6 @@
-import { useState } from "react";
+// import { useState } from "react";
 // import { Switch, Route, useLocation } from "wouter";
-import { queryClient } from "./lib/queryClient";
+// import { queryClient } from "./lib/queryClient";
 // import { QueryClientProvider } from "@tanstack/react-queryClient";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
@@ -54,7 +54,7 @@ import { CartProvider } from "./hooks/use-cart";
 // }
 
 function App() {
-  const [apiKeyDialogOpen, setApiKeyDialogOpen] = useState(false);
+  // const [apiKeyDialogOpen, setApiKeyDialogOpen] = useState(false);
 
   return (
     // <QueryClientProvider client={queryClient}>
